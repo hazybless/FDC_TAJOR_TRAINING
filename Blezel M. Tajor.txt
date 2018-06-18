@@ -1,0 +1,57 @@
+Name: 
+Bleze M. Tajor
+
+Address: 
+153 Tintay Talamban Cebu City
+
+Age: 
+22 yrs old
+
+Birthday: 
+July 22, 1995
+
+About Me: 
+Hey, My name is Blezel 
+not Liezel, Glezel or Blizil
+it's B-L-E-Z-E-L
+nonetheless, just call me bless
+its easy as 1 to 3 and nothing less
+
+I love cooking and watching anime 
+more on adventure and fantasy 
+but I'm super crazy to Korean Drama
+thats the reason why I want to go to korea
+to see my idols and rove to the area
+
+In short, it's just me
+nothing else just me
+a super bubbly and happy
+thanks to God who creates as "ME"
+
+Education:
+Tertiary level:  Certificate in Computer Technology (CCT) 
+				 University of San Carlos-Talamban Cebu City major in Software Development 
+Secondary level: Madridejos National Highschool
+				 Poblacion Madridejos
+				 Bantayan Island Cebu
+Primary level: 	 Bunakan Elementary School
+				 Bunakan Madridejos
+				 Bantayan Island Cebu
+Skills:
+- PHP
+- HTML
+- Javascript
+- CSS
+- MySQL
+- Java
+
+Work Experience:
+Web Application Tester
+Forty Degrees Celcius inc
+Jan 2015 – Present (3 yrs 6 mos)
+1503-1503,15th Flr, Park Centrale, Asia Town I.T Park, Salinas Drive Lahug
+•Responsible for ensuring no bugs or glitches exist that would present problems for users. The one to document and replicate every glitch encounters. 
+•Ensure that every software works as what is expected.
+•Works with the developer for any instances bugs found.
+•Manual testing is being used with exploratory and error guessing method.
+•Create test cases and test plan
