@@ -16,20 +16,29 @@
 </head>
 <body>
 	<div align="center">
-	  <form>
-	    Input a text: <input id="number" type="text" name="number" value="">
-	    <input type="button" value="Submit" onclick="countStr()">
-	    <div>
-	      count
-	      <p id="demo0"></p>
-	    </div>
-	  </form>
-	  Entered String :
-	  <p id="demo"></p>
-	  Ascending Order :
-	  <p id="demo1"></p>
-	  Descending Order :
-	  <p id="demo2"></p>
+		<div>
+		  <form>
+			    <input id="number" type="text" name="number" value="" placeholder="Input a text here">
+			    <input type="button" value="Submit" onclick="countStr()">
+		  </form>
+		</div>
+		<hr> 
+	 	<div>
+	 		<table align="center" border="1">
+				<tr>
+					<td>Entered String: </td>
+					<td><p id="demo"></p></td>
+				</tr>
+				<tr>
+					<td>Ascending Order :</td>
+					<td><p id="demo1"></p></td>
+				</tr>
+				<tr>
+					<td>Descending Order :</td>
+					<td><p id="demo2"></p></td>
+				</tr>
+			</table>
+	 	</div>
 	</div>
 </body>
 </html>

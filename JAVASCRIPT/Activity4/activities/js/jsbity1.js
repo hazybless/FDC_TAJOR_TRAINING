@@ -20,10 +20,10 @@ var arrayasc = [];
 var arraydsc = [];
 function myFunction(){
 	var newArray = parseInt(document.getElementById("number").value);
+	if (Number.isNaN(newArray)) return;
 	array.push(newArray);
 	arrayasc.push(newArray);
 	arraydsc.push(newArray);
-	
 	//entered numbers dislay here
 	document.getElementById("demo").innerHTML = array;
 	console.log(array);
@@ -70,10 +70,9 @@ function mySort_dsc(arr){
 var newArray = [];
 function countStr() {
   var newString = (document.getElementById("number").value);
+  if (Number.isNaN(newString)) return;
   newArray.push(newString);
 
-  //count string length
-  document.getElementById("demo0").innerHTML = newArray.length;
   document.getElementById("demo").innerHTML = newArray;
 
   var asc = countSort_asc(newArray);
