@@ -70,7 +70,9 @@ function mySort_dsc(arr){
 var newArray = [];
 function countStr() {
   var newString = (document.getElementById("number").value);
-  if (Number.isNaN(newString)) return;
+  if(newString == "") {
+    return;
+  }
   newArray.push(newString);
 
   document.getElementById("demo").innerHTML = newArray;
