@@ -1,0 +1,49 @@
+<script type="text/javascript">
+		var array = [];
+		var arrayasc = [];
+		var arraydsc = [];
+		function myFunction(){
+			var newArray = parseInt(document.getElementById("number").value);
+			array.push(newArray);
+			arrayasc.push(newArray);
+			arraydsc.push(newArray);
+			
+			
+			document.getElementById("demo").innerHTML = array;
+			console.log(array);
+			
+			mySort_asc(arrayasc);
+			document.getElementById("asc").innerHTML = array;
+			console.log(mySort_asc(arrayasc));
+			
+			mySort_dsc(arraydsc);
+			document.getElementById("dsc").innerHTML = array;
+			console.log(mySort_dsc(arraydsc));
+		}
+		
+		function mySort_asc(arr){
+			for(var i = 0; i < array.length; i++) {
+				var temp = array[i];
+				var b = i - 1;
+				while (b >= 0 && array[b] > temp) {
+				  array[b + 1] = array[b];
+				  b--;
+				}
+				array[b + 1] = temp;
+			  }
+			  return array;
+		}
+
+		function mySort_dsc(arr){
+			for(var i = 0; i < array.length; i++) {
+				var temp = array[i];
+				var b = i - 1;
+				while (b >= 0 && array[b] < temp) {
+				  array[b + 1] = array[b];
+				  b--;
+				}
+				array[b + 1] = temp ;
+			  }
+			  return array;
+		}
+	</script>
