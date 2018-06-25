@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+	<title>	JQuery Activity 5 </title>
+</head>
+<body>
+<!-- 5th activity -->
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+        <!-- <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Activity #5
+        </button> -->
+        </h5>
+      </div>
+      <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body" align="center">
+         <h1>A program which allows a user to randomly change a div's background color on click.</h1> 
+          <hr>
+          <div style="background-color: red; padding-top: 50px; padding-bottom: 50px; height: 200px; width: 1200px" id="ran_picker">
+            <center>
+              <button><h3>COLOR RANDOMIZER!</h3></button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+
+
+$( document.body )
+    .click(function() {
+      var randomColors = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+      $('#ran_picker').css({
+      'background-color' : randomColors,
+    });
+ })
+</script>
+</html>

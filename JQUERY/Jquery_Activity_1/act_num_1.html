@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <title>JQuery Activity 1</title>
+
+   <style>
+   	.blue {
+   		 background-color: blue;
+   		 color: white;
+   </style>
+
+</head>
+<body>
+   <div class="div_container" align="center">
+   		<p>Change color</p>
+   </div>
+   <script type="text/javascript">
+   	// using setTimeout
+    	$(document).ready(function(){
+     	setTimeout(function(){
+     		$("div").addClass("blue");
+     	},2000) 
+	});
+  // $(document).ready(function(){
+  //       $("div").addClass("blue");
+  //  });
+   </script>
+</body>
+</html>

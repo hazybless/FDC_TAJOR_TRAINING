@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn2").click(function(){
+      $("tbody").prepend("<tr><td>Prepended item</td></tr>");
+    });
+});
+</script>
+
+<style type="text/css">
+  tr{
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <h1 align="center"><span></span></h1>
+  <table border="2" align="center">
+    <tbody>
+      <tr>
+        <td>All Item Will be added above</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+<center>
+  <button id="btn2">Add a Table Row</button>
+</center>
+</body>
+</html>

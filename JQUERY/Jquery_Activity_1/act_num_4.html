@@ -1,0 +1,51 @@
+<html>
+	<meta charset="utf-8">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  	<title>JQuery Activity 4</title>
+  	<style>
+  <style>
+  body {
+    cursor: pointer;
+    min-height: 100px;
+  }
+  div {
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    float: left;
+    background: lightgreen;
+  }
+  span {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body align = "center">
+	<h1><span></span></h1>
+	<hr>
+
+	<table id="id_container">
+		
+	</table>
+ <!-- <script>
+	// count all the elements added here in this file
+	$(document).ready(function(){
+		var elementCount = $( "body" ).find( "*" ).length;
+		$( "body" ).prepend( "<h1> (" + elementCount + ") Element/s Found</h1>" );
+	});
+</script> -->
+</body>
+<script>
+$( document.body ).click(function() {
+    $( "#id_container" ).prepend( $( "<div>" ) );
+    var n = $( "html" ).find( "*" ).length;
+    $( "span" ).text( "There are (" + n + ") elements. Click to add more!");
+  })
+  .click();
+</script>
+</html>

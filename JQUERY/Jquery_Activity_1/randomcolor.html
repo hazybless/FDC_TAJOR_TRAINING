@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FDC JQ_ACTIVITY_1_5</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+	<style>
+		#randColor{
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	</style>
+</head>
+<body>
+	  <!-- 4th activity -->
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Activity #5
+        </button>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+      
+          <div id="randColor">
+            <center>
+              <button class="btn btn-primary">COLOR RANDOMIZER!</button>
+
+             <script>
+             	$(document).ready(function(){
+             		$("button").on("click",function(){
+             			$("#randColor").css({"width": "auto","height":"700px"});
+             				$("#randColor").css(randomColor());
+             		});
+             	});
+             	function randomColor(){
+             		 r = Math.floor(Math.random() * (256));
+      					 g = Math.floor(Math.random() * (256));
+      					 b = Math.floor(Math.random() * (256));
+      					 $('#randColor').css("background-color",'rgb('+ r +','+ g +','+ b +')');
+             	}
+             </script>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
