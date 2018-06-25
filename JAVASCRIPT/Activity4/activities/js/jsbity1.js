@@ -19,6 +19,7 @@ var array = [];
 var arrayasc = [];
 var arraydsc = [];
 function myFunction(){
+	
 	var newArray = parseInt(document.getElementById("number").value);
 	if (Number.isNaN(newArray)) return;
 	array.push(newArray);

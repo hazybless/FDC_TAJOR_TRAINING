@@ -17,7 +17,7 @@
 <div align="center">
 	<div>
 		<form>
-			Input a number: <input id="number" type="number" name="number" >
+			Input a number: <input id="number" type="number" name="number" class="num_btn">
 			<input type="button" id="myBtn" value="Submit" onclick="myFunction()"> 
 			
 		</form>
@@ -40,5 +40,13 @@
 		</table>
 	</div>
 </div>
+<script type="text/javascript">
+	document.querySelector(".num_btn").addEventListener("keypress", function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+	});
+</script>
 </body>
 </html>
