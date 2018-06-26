@@ -34,14 +34,30 @@
 </body>
 <script type="text/javascript">
 
+//random picker given by the jquery site https://codepen.io/Halfhappy/pen/DmxuB
+// $( document.body )
+//     .click(function() {
+//       var randomColors = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+//       $('#ran_picker').css({
+//       'background-color' : randomColors,
+//     });
+//  })
 
+//random picker using array and looping with the math.floor and random
+$(function() {
 
-$( document.body )
-    .click(function() {
-      var randomColors = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
-      $('#ran_picker').css({
-      'background-color' : randomColors,
-    });
- })
+  var colors = ['red', 'blue', 'green', 'grey', 'yellow','orange', 'purple', 'brown', 'black', 'maroon'],color; //primary or secondary colors only
+
+  $('#ran_picker').click(function() {
+    var randColor;
+    // will display random colors  using math.floor and math.random function
+    //floor() method rounds a number DOWNWARDS to the nearest integer, and returns the result.
+    do {
+      randColor = colors[Math.floor(Math.random() * colors.length)]; //get random index from my color array 
+    } while (color == randColor); 
+    $('#ran_picker').css('background-color', randColor);
+    color = randColor; 
+  });
+});
 </script>
 </html>
