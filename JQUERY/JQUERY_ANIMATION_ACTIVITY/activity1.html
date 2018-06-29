@@ -1,0 +1,123 @@
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+<style type="text/css">
+#prev_btn,#next_btn{
+width: 150px;
+}
+#button-previous,#button-next {
+    line-height: 120px;
+    margin-top: 850px;
+    margin-left: 50px;
+    margin-right:0px;
+    margin-bottom: 10px;
+    display:inline-block;
+}
+/*#slider-wrapper {width:500px; height:200px;}
+#slider {width:500px; height:200px; position:relative;}*/
+img{
+      width: 500px;
+      height: 750px;
+}
+.sp {
+    width: 182px; /*328 co je 1/3 - 20margin left*/
+    height: 121px;
+    position: absolute;
+    line-height: 20px;
+    margin-left: 700px;
+    margin-top: 50px;
+}
+</style>
+</head>
+   
+<body>
+<div id="container" align="center">
+    <div id="slider-wrapper">
+        <div id="slider">
+            <div class="backgoundImage">
+                <div id="images"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="container">
+<div id="nav" align="center">
+    <div id="button-previous">
+        <input id="prev_btn" type="button" name="prev_btn" value="Previous">
+    </div>
+    <div id="button-next">
+        <input id="next_btn" type="button" name="next_btn" value="Next">
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+var backgroundImage = new Array(); 
+backgroundImage[0] = "images/image1.jpg";
+backgroundImage[1] = "images/image2.jpg";
+backgroundImage[2] = "images/image3.jpg";
+backgroundImage[3] = "images/image4.jpg";
+backgroundImage[4] = "images/image5.jpg";
+backgroundImage[5] = "images/image6.jpg";
+backgroundImage[6] = "images/image7.jpg";
+backgroundImage[7] = "images/image8.jpg";
+backgroundImage[8] = "images/image9.jpg";
+backgroundImage[9] = "images/image10.jpg";
+backgroundImage[10] = "images/image11.jpg";
+backgroundImage[11] = "images/image12.jpg";
+backgroundImage[12] = "images/image13.jpg";
+backgroundImage[13] = "images/image14.jpg";
+
+function displayAllImages() {
+    var i = 0,
+        len = backgroundImage.length;        
+    for (var i =0; i < backgroundImage.length; i++) {
+        
+        var img = new Image();
+        img.src = backgroundImage[i];
+        img.style.width = '160px';
+        img.style.height = '120px';
+        $('#images').append('<div class="sp"><img src="' + backgroundImage[i] + '" width="160px" height="120px" /></div>');
+
+    }
+};
+
+displayAllImages();
+
+$('.sp').first().addClass('active');
+$('.sp').hide();    
+$('.active').show();
+    $('#button-next').click(function(){
+    $('.active').removeClass('active').addClass('oldActive');    
+     if ( $('.oldActive').is(':last-child')) {
+        $('.sp').first().addClass('active'); 
+        }
+        else{
+        $('.oldActive').next().addClass('active');
+        }
+    $('.oldActive').removeClass('oldActive');
+    $('.sp').fadeOut();
+    $('.active').fadeIn();  
+    });
+    $('#button-previous').click(function(){
+    $('.active').removeClass('active').addClass('oldActive');    
+        if ( $('.oldActive').is(':first-child')) {
+        $('.sp').last().addClass('active');
+        }
+        else{
+            $('.oldActive').prev().addClass('active');
+           }
+    $('.oldActive').removeClass('oldActive');
+    $('.sp').fadeOut();
+    $('.active').fadeIn();
+    });    
+
+</script>
+</html>

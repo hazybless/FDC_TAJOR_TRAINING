@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.9em;
+  }
+  img{
+      width: 500px;
+      height: 750px;
+  }
+  .sp {
+    width: 182px; /*328 co je 1/3 - 20margin left*/
+    height: 121px;
+    position: absolute;
+    line-height: 20px;
+    margin-left: 650px;
+    margin-top: 100px;
+ }
+</style>
+<div id="container" align="center">
+  <div id="slider-wrapper">
+    <div id="slider">
+      <div class="backgoundImage">
+        <div id="images"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">  
+$(document).ready(function() {
+      //background images
+      var backgroundImage = new Array(
+        "images/image1.jpg",
+        "images/image2.jpg",
+        "images/image3.jpg",
+        "images/image4.jpg",
+        "images/image5.jpg",
+        "images/image6.jpg",
+        "images/image7.jpg",
+        "images/image8.jpg",
+        "images/image9.jpg",
+        "images/image10.jpg",
+        "images/image11.jpg",
+        "images/image12.jpg",
+        "images/image13.jpg",
+        "images/image14.jpg",
+      );
+      //store  requestAnimatFrame request ID value
+      var requestId;
+      //add images to the document
+      $.each(backgroundImage, function(index, value) {
+        $("#images").append('<div class = "sp"><img src = "' + value + '"></i></div>');
+      });
+      // hide all but not the first image
+      $('#images div.sp').not(':first-child').hide();
+      //start animation
+    
+      requestAnimationFrame(animate);
+      //animate();
+      
+});
+//the animation function
+function animate() {
+  setTimeout(function() {
+    //save the id returned from the function to use it 
+    // to cancel or stop the animation 
+    requestId = requestAnimationFrame(animate);
+    // animating/drawing code goes here
+    animateIcons(requestId);
+  }, 1000);
+}
+function animateIcons(requestId) {
+  //get the visile element
+  let curElem = $("#images div.sp:visible");
+  //if next element exists
+  let hasNext = curElem.next().length > 0;
+  //if has next sibling
+  if (hasNext) {
+    //fade out the current element
+    curElem.fadeOut(1000, function() {
+    //fade in the next sibling
+    curElem.next().fadeIn(2000);
+    });
+  } else {
+    // //start animating from the start again
+    let firstElem = $("#images div.sp:first-child");
+    //fade out the current element
+    curElem.fadeOut(1000, function() {
+      //fade in the first element again
+      firstElem.fadeIn(1000);
+    });
+    //or you can use the following alternatively
+    //  to stop the animation 
+    // stopAnimation(requestId);
+  }
+}
+function stopAnimation(requestId) {
+  // use the requestID to cancel the requestAnimationFrame call
+  cancelAnimationFrame(requestId);
+}
+</script>
+</body>
+</html>
