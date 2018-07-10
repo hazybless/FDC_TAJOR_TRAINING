@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Left Join</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  span{
+     font-weight: bold;
+     font-color: black;
+  }
+  table, th, td {
+   border: 1px solid black;
+   text-align: center;
+   width: 50%;
+   height: 50%;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+	    <div class="container-fluid bg-2 text-center">
+		  <h3 class="margin">SQL <span>LEFT JOIN</span> Keyword</h3>
+		  <p>The <span>LEFT JOIN</span> keyword returns all records from the left table (table1), and the matched records from the right table (table2). The result is NULL from the right side, if there is no match.</p>
+      <p><b>Note:</b> In some databases LEFT JOIN is called LEFT OUTER JOIN.</p>
+		</div>
+		<hr>
+		<div class="text-center" style="border-style: solid; border-width: 12px 20px 14px 30px;">
+			<span style="color:black">
+			<h3 class="margin">LEFT JOIN Syntax</h3>
+      <p>
+			<span style="color:mediumblue">SELECT</span> <em>column_name(s)</em><br>
+			<span style="color:mediumblue">FROM</span> <em>table1</em><br>
+			<span style="color:mediumblue">LEFT</span> <span style="color:mediumblue">JOIN</span> <em>table2 </em><span style="color:mediumblue">ON</span> <em>table1.column_name </em>=<em> table2.column_name</em>;<span style="color:">
+			</span>
+      </p>
+      </span>
+		</div>
+
+				
+		<!-- Third Container (Grid) -->
+		<div class="container-fluid bg-3 text-center">    
+		  <h3 class="margin">Demo</h3>
+		  <p>In this example we will be using 2 sample of tables</p>
+		  <img src="./images/usedtables.png"></img>
+		  <p>Below is a selection from the "Customers" table:</p> <br>
+	  		<div class="w3-responsive text-center ">
+				<img src="./images/table_cos.png"></img>
+			</div>
+			<br><p>And a selection from the "Orders" table:</p> <br>
+			<div class="text-center">
+				<img src="./images/table_ord.png"></img>
+			</div>
+		</div>
+
+		
+		<div class = "text-center" style="border-style: solid; border-width: 12px 20px 14px 30px;">
+			<span style="color:black"><span style="color:">
+				<p>The following SQL statement will select all customers, and any orders they might have:</p>
+      <p>
+			<span style="color:mediumblue">SELECT</span> 
+      Customers.CustomerName, Orders.OrderID<br>
+      <span style="color:mediumblue">FROM</span> 
+      <span style="color:">Customers<br></span>
+      <span style="color:mediumblue">LEFT</span>
+      <span style="color:mediumblue">JOIN</span> 
+      Orders
+			<span style="color:mediumblue">ON</span> Customers.CustomerID = Orders.CustomerID<br><span style="color:">
+			</span> <span style="color:mediumblue">ORDER</span> 
+      <span style="color:mediumblue">BY</span> 
+      Customers.CustomerName;<span style="color:">
+			</span>
+      </p>
+      </span>
+		</div>
+		<div class="container-fluid bg-2 text-center">
+			<img src="./images/left_result_2.png"></img>
+      <p><b>Note:</b> The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).</p>
+		</div>
+  </div>
+</div>
+
+</body>
+</html>

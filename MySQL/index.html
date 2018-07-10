@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>MySQl Joins</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  span{
+     font-weight: bold;
+  }
+  .li_join{
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">MySQL Joins</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="inner_join.html" target="_blank">INNER</a></li>
+        <li><a href="left_join.html"  target="_blank">LEFT</a></li>
+        <li><a href="right_join.html" target="_blank">RIGHT</a></li>
+        <li><a href="outer_join.html" target="_blank">OUTER</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Understanding JOINs in MySQL</h3>
+  <p><span>JOIN</span> is basically used to retrieve records from two or more related tables in a single result set.</p>
+</div>
+<br>
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Types of MySQl Joins</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p> <span>LEFT JOIN </span> - Return all records from the left table, and the matched records from the right table</p>
+      <a href="left_join.html" target="_blank"><img src="./images/img_leftjoin.gif" class="img-responsive margin" style="width:80%" alt="Image"></a>
+    </div>
+    <div class="col-sm-3"> 
+      <p><span>INNER JOIN</span> - Return all  records that have matching values in both tables<br></p>
+      <a href="inner_join.html" target="_blank"><img src="./images/img_innerjoin.gif" class="img-responsive margin" style="width:80%" alt="Image"></a>
+    </div>
+    <div class="col-sm-3"> 
+      <p><span>RIGHT JOIN</span> - Return all records from the right table, and the matched records from the left table</p>
+      <a href="right_join.html" target="_blank"><img src="./images/img_rightjoin.gif" class="img-responsive margin" style="width:80%" alt="Image"></a>
+    </div>
+    <div class="col-sm-3"> 
+      <p><span>OUTER JOIN</span> - Return all records when there is a match in either left or right table</p>
+      <a href="outer_join.html" target="_blank"><img align="center" src="./images/img_fulljoin.gif" class="img-responsive margin" style="width:80%" alt="Image"></a>
+    </div>
+  </div>
+</div>
+
+<!-- First Container -->
+<div class="container-fluid bg-1">
+  <h1 class="margin  text-center ">Summary</h1>
+  <p align="center"><b>“JOIN” </b>is an SQL keyword used to query data from two or more related tables.</p>
+  <h3 class="margin  text-center ">Types of Joins</h3>
+  <ul> 
+    <li class="li_join">INNER JOIN</li> <p>- The most frequently used clause is INNER JOIN. This produces a set of records which match in both the user and course tables.</p>
+    <li class="li_join">LEFT JOIN</li> <p>- Produces a set of records which matches every entry in the left table regardless of any matching entry in the right table.</p>
+    <li class="li_join">RIGHT JOIN</li> <p>- Produces a set of records which matches every entry in the right table regardless of any matching entry in the left table.</p>
+    <li class="li_join">OUTER JOIN</li> <p>- Which returns all records in both tables regardless of any match. Where no match exists, the missing side will contain NULL. <br>
+    <small><em><b>OUTER JOIN</b> is less useful than <b>INNER</b>, <b>LEFT</b> or <b>RIGHT</b> and it’s not implemented in MySQL. However, you can work around this restriction using the <b>UNION</b> of a <b>LEFT</b> and <b>RIGHT JOIN</b></p></em></small>
+  </ul>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>MySQl Joins &copy </p> 
+</footer>
+
+</body>
+</html>
